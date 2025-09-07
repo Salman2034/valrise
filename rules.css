@@ -1,0 +1,238 @@
+/* Global Variables */
+:root {
+    --primary-color: #ff3333; /* Site theme red for consistency */
+    --dark-bg: #121212;
+    --dark-surface-1: #1e1e1e;
+    --dark-surface-2: #2a2a2a;
+    --text-primary: #ffffff;
+    --text-secondary: #b3b3b3;
+}
+
+/* Rules Page Specific Styles */
+
+/* Rules Hero Section */
+.rules-hero {
+    background: linear-gradient(rgba(18, 18, 18, 0.8), rgba(18, 18, 18, 0.8)), url('https://i.redd.it/nkb6isbplwr91.jpg') no-repeat center center/cover;
+    padding: 120px 0 60px;
+    text-align: center;
+    border-bottom: 2px solid var(--dark-surface-2);
+}
+
+.rules-hero h1 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--text-primary);
+    letter-spacing: 1px;
+}
+
+.rules-hero h1 span {
+    color: var(--primary-color);
+}
+
+.rules-hero .subtitle {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto 25px;
+    line-height: 1.7;
+}
+
+.rules-hero .divider {
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-color);
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+/* Rules Content Section */
+.rules-content {
+    background-color: var(--dark-bg);
+    padding: 80px 0;
+}
+
+.accordion {
+    max-width: 850px;
+    margin: 0 auto;
+    border: 1px solid var(--dark-surface-2);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.accordion-item {
+    border-bottom: 1px solid var(--dark-surface-2);
+}
+
+.accordion-item:last-child {
+    border-bottom: none;
+}
+
+.accordion-header {
+    background-color: var(--dark-surface-1);
+    width: 100%;
+    border: none;
+    padding: 20px 25px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordion-header:hover {
+    background-color: var(--dark-surface-2);
+}
+
+.accordion-item.active .accordion-header {
+    background-color: var(--primary-color);
+    color: var(--text-primary);
+}
+
+.accordion-header i {
+    margin-right: 15px;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+.accordion-item.active .accordion-header i {
+    color: var(--text-primary);
+}
+
+.accordion-header .icon-toggle {
+    transition: transform 0.3s ease-in-out;
+}
+
+.accordion-item.active .icon-toggle {
+    transform: rotate(180deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+    background-color: var(--dark-surface-1);
+    padding: 0 25px;
+    color: var(--text-secondary);
+}
+
+.accordion-content ul {
+    list-style-type: none;
+    padding: 20px 0;
+}
+
+.accordion-content ul li {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    padding-left: 25px;
+    position: relative;
+}
+
+.accordion-content ul li::before {
+    content: '\2023'; /* Bullet point */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--primary-color);
+}
+
+.accordion-content ul li strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+/* Punishment Table */
+.punishment-table {
+    margin: 25px 0;
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.table-header, .table-row {
+    display: grid;
+    grid-template-columns: 1fr 2fr 4fr;
+    gap: 15px;
+    padding: 15px;
+    align-items: center;
+    border-bottom: 1px solid var(--dark-surface-2);
+}
+
+.table-header {
+    background-color: var(--dark-surface-2);
+    font-weight: 600;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+.table-row {
+    background-color: transparent;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    transition: background-color 0.3s ease;
+}
+
+.table-row:last-child {
+    border-bottom: none;
+}
+
+.table-row:hover {
+    background-color: var(--dark-surface-2);
+}
+
+.table-row div:first-child {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.disclaimer {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: var(--dark-surface-1);
+    border-left: 3px solid var(--primary-color);
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    border-radius: 0 4px 4px 0;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .rules-hero h1 {
+        font-size: 2.4rem;
+    }
+
+    .accordion-header {
+        font-size: 1.1rem;
+        padding: 18px 20px;
+    }
+
+    .table-header {
+        display: none;
+    }
+
+    .table-row {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 20px;
+        border-bottom: 1px solid var(--dark-surface-2);
+    }
+
+    .table-row div::before {
+        content: attr(data-label);
+        font-weight: 600;
+        color: var(--text-primary);
+        display: block;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+    }
+}

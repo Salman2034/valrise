@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valrise Gaming - GTA SAMP RP Server</title>
+    <link rel="icon" href="https://forum.open.mp/uploads/avatars/avatar_5151.jpg?dateline=1699279499">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body id="page-home">
+    <!-- Preloader -->
+    <div id="preloader">
+        <img src="https://valrisegaming.com/assets/logo_full_3-1WU60iYf.png" alt="Valrise Gaming Logo" class="preloader-logo">
+    </div>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html"><img src="https://valrisegaming.com/assets/logo_full_3-1WU60iYf.png" alt="Valrise Gaming Logo"></a>
+                </div>
+                <div class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#">Info <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#stats">Statistics</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#team">Team</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Community <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#join">Forum</a></li>
+                            <li><a href="#join">Discord</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="tutorials.html">Tutorials</a></li>
+                    <li><a href="rules.html">Rules</a></li>
+                    <li><a href="#donate">Donate</a></li>
+                    <li class="nav-button-item"><a href="https://panel.valrisegaming.com/" target="_blank" rel="noopener noreferrer" class="nav-btn-secondary">Panel</a></li>
+                    <li class="nav-button-item"><a href="#join" class="nav-cta" id="join-now-button">Join Now</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div id="particles-js"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title"><span class="hero-welcome-text">Welcome to</span> <img src="https://valrisegaming.com/assets/logo_full_3-1WU60iYf.png" alt="Valrise Gaming Logo" class="hero-logo"></h1>
+                <p class="hero-subtitle">The ultimate GTA SAMP Roleplay experience</p>
+                <div class="hero-cta">
+                    <a href="#join" class="btn btn-primary">Join Server</a>
+                    <a href="#features" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="video-wrapper">
+                    <div class="video-container">
+                        <video id="heroVideo" src="assets/trailer.mp4" poster="https://img.youtube.com/vi/X8hTAM1X7Z4/maxresdefault.jpg" loop muted playsinline preload="metadata"></video>
+                        <div class="video-controls">
+                            <div class="progress-container">
+                                <input type="range" id="seekBar" value="0" min="0" step="1">
+                            </div>
+                            <div class="main-controls">
+                                <div class="controls-left">
+                                    <button id="playPauseBtn" aria-label="Play/Pause"><i class="fas fa-play"></i></button>
+                                    <button id="rewindBtn" aria-label="Rewind 10 seconds"><i class="fas fa-backward"></i></button>
+                                    <button id="forwardBtn" aria-label="Forward 10 seconds"><i class="fas fa-forward"></i></button>
+                                    <div class="volume-container">
+                                        <button id="muteBtn" aria-label="Mute/Unmute"><i class="fas fa-volume-up"></i></button>
+                                        <input type="range" id="volumeSlider" min="0" max="1" step="0.1" value="1" aria-label="Volume">
+                                    </div>
+                                </div>
+                                <div class="controls-right">
+                                    <span class="time-display" id="timeDisplay">0:00 / 0:00</span>
+                                    <button id="fullscreenBtn" aria-label="Toggle Fullscreen"><i class="fas fa-expand"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="video-caption">Click the thumbnail above to play the video. It may take some time to load.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2><span>Server</span> Features</h2>
+                <p>Discover what makes Valrise Gaming the best SAMP RP server</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                    <h3>Active Community</h3>
+                    <p>Join our thriving community of roleplayers and make new friends</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Unique Jobs</h3>
+                    <p>Choose from a variety of custom jobs and career paths</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>Custom Vehicles</h3>
+                    <p>Explore the city with our collection of custom vehicles</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Property System</h3>
+                    <p>Own houses, businesses, and more with our advanced property system</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Factions & Gangs</h3>
+                    <p>Join official factions or create your own gang</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Custom Scripts</h3>
+                    <p>Experience unique gameplay with our custom-coded features</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section id="stats" class="stats">
+        <div class="container">
+            <div class="section-header">
+                <h2><span>Server</span> Statistics</h2>
+                <p>Our community is growing every day</p>
+            </div>
+            <div class="stats-container">
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-gamepad"></i></div>
+                    <div class="stat-value" id="live-player-count">...</div>
+                    <div class="stat-label">Currently Playing</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-home"></i></div>
+                    <div class="stat-value" data-count="1852">0</div>
+                    <div class="stat-label">Total Properties</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-car"></i></div>
+                    <div class="stat-value" data-count="12113">0</div>
+                    <div class="stat-label">Total Vehicles</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-users"></i></div>
+                    <div class="stat-value" data-count="58">0</div>
+                    <div class="stat-label">Total Groups</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-gem"></i></div>
+                    <div class="stat-value" data-count="48">0</div>
+                    <div class="stat-label">Total Active Donators</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-user"></i></div>
+                    <div class="stat-value" data-count="14439">0</div>
+                    <div class="stat-label">Total Punishments</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-comments"></i></div>
+                    <div class="stat-value" data-count="639">0</div>
+                    <div class="stat-label">Total WT Channels</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-ticket-alt"></i></div>
+                    <div class="stat-value" data-count="300242">0</div>
+                    <div class="stat-label">Total Staff Tickets</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="join" class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <i class="fas fa-gamepad cta-icon"></i>
+                <h2><span>Ready</span> to join the action?</h2>
+                <p>Connect to our server now and start your roleplay journey</p>
+                <div class="cta-buttons">
+                    <a href="samp://rp.valrisegaming.com:7777" class="btn btn-primary">Connect Now</a>
+                    <a href="https://discord.valrisegaming.com" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Join Discord</a>
+                    <a href="https://forum.valrisegaming.com" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Visit Forum</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2><span>About</span> Us</h2>
+                <p>Our core values and commitment to the community</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Welcome to Valrise Gaming.</h3>
+                    <p>We are a gaming community with a few core values that we wish to pursue. Our goal is to create an unparalleled gaming experience for all our members.</p>
+                    
+                    <div class="about-point">
+                        <h4><i class="fas fa-code-branch"></i> Quality & Customization</h4>
+                        <p>The first and foremost, we wish to provide quality servers that were built for our community by our developers. We need fully customized scripts that can fit our vision and be adjusted to the needs of the players depending on their feedback and submitted suggestions.</p>
+                    </div>
+                    
+                    <div class="about-point">
+                        <h4><i class="fas fa-handshake"></i> Positive Environment</h4>
+                        <p>Moving on to our next value, which is positive and friendly environment within our community. We will not harbor hostile and negative atmosphere. Everybody must be respected.</p>
+                    </div>
+    
+                    <div class="about-point">
+                        <h4><i class="fas fa-users"></i> Community Driven</h4>
+                        <p>We also agree with the fact that the players create a community. Those members and their feedback must be respected and taken into consideration with development of this community. We will appreciate any feedback you may provide us with.</p>
+                    </div>
+                    
+                    <div class="about-point">
+                        <h4><i class="fas fa-headset"></i> Approachable Staff</h4>
+                        <p>Furthermore, we wish to ensure that our staff team will be fully approachable by you, the players. Approachable and friendly staff is what we pursue to have, a staff team that serves the players, and perform their jobs for the good of the server, not for any personal interests.</p>
+                    </div>
+    
+                    <p><strong>In conclusion</strong>, our community wishes to ensure that all our players will be playing in a positive environment with a friendly community, in a server with quality scripts and approachable staff team. We may expand to other games in future... slowly and steadily in order to ensure that we get everything created properly and so that the players can enjoy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team">
+        <div class="container">
+            <div class="section-header">
+                <h2><span>Our</span> Team</h2>
+                <p>The dedicated individuals behind Valrise Gaming</p>
+            </div>
+            <div class="team-grid">
+                <!-- Team Member Card -->
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <img src="https://forum.valrisegaming.com/uploads/monthly_2018_10/1601958962_ss(2016-03-20at11_09_09).jpg.63dfcaae61134920452cd9371956abc3.jpg" alt="Dylan's Profile Image">
+                    </div>
+                    <h3>Dylan</h3>
+                    <p class="team-role">Community Owner</p>
+                    <div class="team-contact">
+                        <a href="#"><i class="fab fa-discord"></i> dylan_001</a>
+                        <a href="mailto:Dylan@valrisegaming.com"><i class="fas fa-envelope"></i> Email</a>
+                    </div>
+                </div>
+                <!-- Team Member Card -->
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <img src="https://forum.valrisegaming.com/uploads/monthly_2018_01/9b8d8c3d7970cb35174b3a0162ad9870_51.gif.a340b1a665adf4764d2f9e5c847c677c.gif" alt="Mikro's Profile Image">
+                    </div>
+                    <h3>Mikro</h3>
+                    <p class="team-role">Community Owner</p>
+                    <div class="team-contact">
+                        <a href="#"><i class="fab fa-discord"></i> Mikro#5214</a>
+                        <a href="mailto:Mikro@valrisegaming.com"><i class="fas fa-envelope"></i> Email</a>
+                    </div>
+                </div>
+                <!-- Team Member Card -->
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <img src="https://forum.valrisegaming.com/uploads/monthly_2020_04/masked_aladeen.png.7067024866260ef21713dc7b0764eb94.png" alt="LocMax's Profile Image">
+                    </div>
+                    <h3>LocMax</h3>
+                    <p class="team-role">Community Manager</p>
+                    <div class="team-contact">
+                        <a href="#"><i class="fab fa-discord"></i> ŁocMax #0139</a>
+                        <a href="mailto:LocMax@valrisegaming.com"><i class="fas fa-envelope"></i> Email</a>
+                    </div>
+                </div>
+                <!-- Team Member Card -->
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Leonardo</h3>
+                    <p class="team-role">Community Manager</p>
+                    <div class="team-contact">
+                        <a href="mailto:Leonardo@valrisegaming.com"><i class="fas fa-envelope"></i> Email</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Banner Section -->
+    <section id="donate" class="donation-banner">
+        <div class="container">
+            <div class="donation-content">
+                <i class="fas fa-gift donation-icon"></i>
+                <h2>Donate for Valrise Gaming</h2>
+                <p>Get some extras by supporting Valrise. You can do so by donating on our panel. Afterwards you can select the perks you wish to receive.</p>
+                <div class="donation-buttons">
+                    <a href="https://panel.valrisegaming.com/donate" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Support Us Now</a>
+                    <button id="viewDonatorsBtn" class="btn btn-secondary">View Donators</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3>VALRISE <span>GAMING</span></h3>
+                    <p>The ultimate GTA SAMP Roleplay experience with custom features, active community, and regular updates.</p>
+                    <div class="social-links">
+                        <a href="https://twitter.com/MudooGaming" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.twitch.tv/ValriseGaming" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitch"></i></a>
+                        <a href="https://steamcommunity.com/groups/ValriseGaming" target="_blank" rel="noopener noreferrer"><i class="fab fa-steam"></i></a>
+                        <a href="https://www.youtube.com/channel/UCQpkfgZ5PjaFi85YtWqFbnw" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#stats">Statistics</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#team">Team</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="rules.html">Rules</a></li>
+                        <li><a href="tutorials.html">Tutorials</a></li>
+                        <li><a href="https://forum.sagov.us/" target="_blank" rel="noopener noreferrer">SA Govt.</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Connect With Us</h3>
+                    <p><i class="fas fa-server"></i> Server IP: rp.valrisegaming.com:7777</p>
+                    <p><i class="fab fa-discord"></i> Discord: discord.valrisegaming.com</p>
+                    <p><i class="fas fa-comments"></i> Forum: forum.valrisegaming.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2017-2025 Valrise Gaming. All rights reserved.</p>
+                <p>Made with 💖 by <a href="https://discord.com/users/586209832370176022" target="_blank" rel="noopener noreferrer">Salman Sami</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Donator Modal -->
+    <div id="donator-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div>
+                    <h2>Our Supporters</h2>
+                    <p class="modal-thank-you">Thank you for your support!</p>
+                </div>
+                <span class="close-btn">&times;</span>
+            </div>
+            <div class="modal-body">
+                <ul class="donator-list">
+                    <li class="donator-category-header"><h3><i class="fas fa-heart"></i> Heart Donators</h3></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Redline</span><span class="donator-date">14 Dec 2021</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Shermaine_Champagne</span><span class="donator-date">1 Dec 2023</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Charles_McTavish</span><span class="donator-date">30 Nov 2024</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">tenuu</span><span class="donator-date">21 Oct 2021</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Alyx</span><span class="donator-date">17 May 2025</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Olivia_Benson</span><span class="donator-date">8 Oct 2024</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Imola_Rot</span><span class="donator-date">20 May 2025</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Benson_Corleone</span><span class="donator-date">31 May 2019</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Gusino_Zuan</span><span class="donator-date">8 Jul 2023</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Darcy_Queen</span><span class="donator-date">29 Jun 2025</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Anonymous</span><span class="donator-date">24 Jun 2022</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Sali</span><span class="donator-date">23 Apr 2022</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Sami_Wolfeyes</span><span class="donator-date">4 Jul 2025</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Paoloo_</span><span class="donator-date">21 Jun 2022</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Jada_Dixon</span><span class="donator-date">4 Dec 2021</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Nicola_Young</span><span class="donator-date">2 Aug 2021</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Shaquille_Burns</span><span class="donator-date">6 Aug 2023</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Lowkey</span><span class="donator-date">16 Dec 2023</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Chris_Harris</span><span class="donator-date">15 May 2025</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Klarissa_Vaselin</span><span class="donator-date">23 Apr 2025</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Anonymous</span><span class="donator-date">25 Nov 2020</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Andrew_Wallace</span><span class="donator-date">3 Mar 2023</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Matteo_Armani</span><span class="donator-date">12 Apr 2020</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Hiki_Walker</span><span class="donator-date">30 Jun 2020</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Rayan_Tremblay</span><span class="donator-date">28 May 2019</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Karl_Albrecht</span><span class="donator-date">28 Jul 2024</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Heats</span><span class="donator-date">4 Mar 2020</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Adolf_Himmler</span><span class="donator-date">16 Jul 2024</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Brian_Young</span><span class="donator-date">2 Oct 2024</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Cecillia_Yvaine</span><span class="donator-date">2 Sep 2020</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Vincent_Russell</span><span class="donator-date">15 May 2019</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Ermanno</span><span class="donator-date">24 May 2019</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Puti_Mas</span><span class="donator-date">11 Feb 2024</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Amaru_Jackson</span><span class="donator-date">24 Dec 2023</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Boyko_Gambino</span><span class="donator-date">29 Mar 2021</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Blaze_Fuego</span><span class="donator-date">26 May 2024</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Judith_Lloyd</span><span class="donator-date">1 Jul 2020</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Beric Gambino</span><span class="donator-date">14 Oct 2018</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Baga_Venture</span><span class="donator-date">10 May 2021</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Kazak_Kodorov</span><span class="donator-date">7 Sep 2021</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Kacper_Kowalski</span><span class="donator-date">10 Aug 2019</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Rose_Oberoii</span><span class="donator-date">14 May 2021</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Lincoln_Gvardia</span><span class="donator-date">23 Dec 2020</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Asger_Brandberg</span><span class="donator-date">6 Dec 2021</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Trevon_Banks</span><span class="donator-date">4 Dec 2021</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Adriano_Giuliano</span><span class="donator-date">18 Oct 2021</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Knoxville_Eix</span><span class="donator-date">13 Jul 2022</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Toms</span><span class="donator-date">22 May 2021</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Eazy_Dalton</span><span class="donator-date">18 Dec 2020</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Elliot_Alderson</span><span class="donator-date">7 Jun 2019</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Ashton_Gambino</span><span class="donator-date">17 Oct 2018</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Carlo_Gambino</span><span class="donator-date">16 Oct 2018</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Anonymous</span><span class="donator-date">26 May 2022</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Curtis_Barns</span><span class="donator-date">12 Jun 2022</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Joshua_Luellen</span><span class="donator-date">27 Oct 2021</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">KonsopiA_Alemdar</span><span class="donator-date">30 Mar 2021</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Pruno</span><span class="donator-date">30 Dec 2021</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Cecilia_Cromwell</span><span class="donator-date">17 Sep 2021</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Randy_Corleone</span><span class="donator-date">31 Dec 2021</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Anonymous</span><span class="donator-date">30 Sep 2018</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Brian_Harlow</span><span class="donator-date">15 Jul 2022</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Anonymous</span><span class="donator-date">11 Jul 2022</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Anonymous</span><span class="donator-date">22 May 2018</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Ivar_Aslanov</span><span class="donator-date">15 Jul 2022</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Rafael_Berrywood</span><span class="donator-date">20 Aug 2021</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Nikolai_Slater</span><span class="donator-date">19 Jul 2019</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Ceso_Guzman</span><span class="donator-date">18 Jun 2021</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Shaquan_Bluntz</span><span class="donator-date">25 May 2022</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Seryoga_Nurmagomedov</span><span class="donator-date">6 Nov 2021</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">TiMoN</span><span class="donator-date">24 Jun 2019</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Jake_Windsor</span><span class="donator-date">9 May 2021</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Brandon_Flores</span><span class="donator-date">29 Dec 2021</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Tonio_Gambino</span><span class="donator-date">20 Mar 2022</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">John_Cancer</span><span class="donator-date">23 Aug 2021</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Anonymous</span><span class="donator-date">18 Sep 2018</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">INFERNO</span><span class="donator-date">25 Feb 2020</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">IAmHeinrich</span><span class="donator-date">30 Nov 2020</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Sammy.</span><span class="donator-date">6 Jul 2021</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">CRaul</span><span class="donator-date">20 Oct 2018</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Leon_Bailey</span><span class="donator-date">11 Apr 2020</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Shane_Callahan</span><span class="donator-date">13 Feb 2021</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Jones</span><span class="donator-date">8 Mar 2020</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Unknown</span><span class="donator-date">19 Apr 2019</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Anonymous</span><span class="donator-date">13 May 2020</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">'Wes</span><span class="donator-date">25 Feb 2019</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Julio</span><span class="donator-date">4 Apr 2020</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Stefano_Montana</span><span class="donator-date">8 Oct 2020</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Buddah_Alien</span><span class="donator-date">20 May 2020</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Nathan.</span><span class="donator-date">15 May 2020</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Ben Blake</span><span class="donator-date">4 Apr 2020</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Leon_Gvardia</span><span class="donator-date">30 Apr 2020</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Unknown</span><span class="donator-date">12 Jun 2020</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Anonymous</span><span class="donator-date">11 Aug 2019</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Volume</span><span class="donator-date">7 Feb 2020</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Unknown</span><span class="donator-date">24 Jul 2019</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Luzziz</span><span class="donator-date">11 Feb 2019</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Dizzy</span><span class="donator-date">25 Apr 2019</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-heart"></i></span><span class="donator-name">Anonymous</span><span class="donator-date">22 May 2018</span></li>
+                    
+                    <li class="donator-category-header"><h3><i class="fas fa-star"></i> Star Donators</h3></li>
+                    <li><span class="donator-icon"><i class="fas fa-star"></i></span><span class="donator-name">Anonymous</span><span class="donator-date">9 May 2025</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-star"></i></span><span class="donator-name">Milan_Svensson</span><span class="donator-date">29 Apr 2025</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-star"></i></span><span class="donator-name">Luis_Ramirez</span><span class="donator-date">2 Jul 2021</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-star"></i></span><span class="donator-name">Irina_Katz</span><span class="donator-date">12 Jul 2025</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-star"></i></span><span class="donator-name">Chuck_Clayton</span><span class="donator-date">14 Feb 2025</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-star"></i></span><span class="donator-name">Darius_Tanz</span><span class="donator-date">3 Jun 2023</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-star"></i></span><span class="donator-name">Tom_Adams</span><span class="donator-date">8 Mar 2025</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-star"></i></span><span class="donator-name">Colt_Calhoun</span><span class="donator-date">2 Jan 2022</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-star"></i></span><span class="donator-name">DeShawn_Anderson</span><span class="donator-date">2 May 2024</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-star"></i></span><span class="donator-name">Lorenzo_Sosa</span><span class="donator-date">3 Oct 2021</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-star"></i></span><span class="donator-name">Elis Leonardo</span><span class="donator-date">11 Jul 2022</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-star"></i></span><span class="donator-name">Keenan_McIntyre</span><span class="donator-date">17 May 2022</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-star"></i></span><span class="donator-name">Dada_Yewell</span><span class="donator-date">13 Dec 2022</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-star"></i></span><span class="donator-name">SonsOfSamoaC</span><span class="donator-date">25 Jan 2023</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-star"></i></span><span class="donator-name">Payin</span><span class="donator-date">17 Apr 2022</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-star"></i></span><span class="donator-name">Hish_Khan</span><span class="donator-date">22 Jun 2021</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-star"></i></span><span class="donator-name">Anonymous</span><span class="donator-date">15 Jun 2022</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-star"></i></span><span class="donator-name">Nora_Nakazato</span><span class="donator-date">3 Mar 2022</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-star"></i></span><span class="donator-name">Nuevo_Laredo</span><span class="donator-date">15 May 2022</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-star"></i></span><span class="donator-name">Jamie_Nocta</span><span class="donator-date">7 Mar 2022</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-star"></i></span><span class="donator-name">David_Nazario</span><span class="donator-date">16 Oct 2021</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-star"></i></span><span class="donator-name">Jeff_Cancer</span><span class="donator-date">20 Oct 2021</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-star"></i></span><span class="donator-name">Bailey_Davis</span><span class="donator-date">27 Mar 2021</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-star"></i></span><span class="donator-name">Marco_Kim</span><span class="donator-date">13 Nov 2021</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-star"></i></span><span class="donator-name">Luna_Matteo</span><span class="donator-date">19 Aug 2021</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-star"></i></span><span class="donator-name">Tay_Smith</span><span class="donator-date">26 Oct 2020</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-star"></i></span><span class="donator-name">Sylvester_Gambino</span><span class="donator-date">18 Jan 2020</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-star"></i></span><span class="donator-name">Anonymous</span><span class="donator-date">28 Dec 2019</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-star"></i></span><span class="donator-name">Ralph_Toretto</span><span class="donator-date">22 Dec 2019</span></li>
+                    <li><span class="donator-icon"><i class="fas fa-star"></i></span><span class="donator-name">Viktor_Reznov</span><span class="donator-date">12 Jul 2018</span></li>
+                    
+                    <li class="donator-category-header"><h3>Donators</h3></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Mooncake_Par</span><span class="donator-date">1 Sep 2025</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Amo_Deano</span><span class="donator-date">11 Aug 2025</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Siba_Crimson</span><span class="donator-date">25 Jul 2025</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Yanko_Alaric</span><span class="donator-date">4 Jul 2025</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Abhishek</span><span class="donator-date">29 Jun 2025</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Anonymous</span><span class="donator-date">11 Jun 2025</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">sybau</span><span class="donator-date">28 Apr 2025</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Joshua_Castillo</span><span class="donator-date">26 Apr 2025</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Anonymous</span><span class="donator-date">14 Apr 2025</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Joshua_Ostrowski</span><span class="donator-date">22 Mar 2025</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Jim_Orangutang</span><span class="donator-date">15 Mar 2025</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Solim_Verderaz</span><span class="donator-date">14 Mar 2025</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Maddy_Changco</span><span class="donator-date">7 Mar 2025</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Leo_Russo</span><span class="donator-date">15 Jan 2025</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Aki</span><span class="donator-date">13 Jan 2025</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Anonymous</span><span class="donator-date">2 Dec 2024</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Jonko_Aminakoyum</span><span class="donator-date">30 Nov 2024</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">DaltonTT</span><span class="donator-date">11 Nov 2024</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Darryl_Williams</span><span class="donator-date">28 Sep 2024</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Anonymous</span><span class="donator-date">10 Sep 2024</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Eugene_Lombardi</span><span class="donator-date">10 Sep 2024</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Dominique_Burns</span><span class="donator-date">9 Sep 2024</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Nathan_Reiner</span><span class="donator-date">28 Jul 2024</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Anonymous</span><span class="donator-date">1 Jul 2024</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Vanko_Ravens</span><span class="donator-date">17 Jun 2024</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Reina_Rivera</span><span class="donator-date">1 May 2024</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Dayvon_Moss</span><span class="donator-date">13 Apr 2024</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Cruz_Merill</span><span class="donator-date">11 May 2023</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Frankie_OConor</span><span class="donator-date">17 Jan 2024</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Pablo_Brix</span><span class="donator-date">17 Feb 2024</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Herve_Dion</span><span class="donator-date">16 Jan 2022</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Melchoir_Fontana</span><span class="donator-date">20 Nov 2023</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Ritzen_Rico</span><span class="donator-date">2 Nov 2023</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Don_Eladio</span><span class="donator-date">5 Oct 2023</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Madness</span><span class="donator-date">18 Aug 2023</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Anonymous</span><span class="donator-date">15 Aug 2023</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Banadoura_Meshwiye</span><span class="donator-date">10 Jul 2023</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Kane_Rakim</span><span class="donator-date">9 Jul 2023</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Quica_ElGuerro</span><span class="donator-date">7 Jun 2023</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Rick_Collins</span><span class="donator-date">2 Aug 2021</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Anonymous</span><span class="donator-date">3 Jun 2023</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Adriano_Rispoli</span><span class="donator-date">1 Jun 2023</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Anjel_Tone</span><span class="donator-date">27 Mar 2023</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Jeffrey_Barns</span><span class="donator-date">11 Mar 2023</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Shawn_Gadino</span><span class="donator-date">15 Feb 2023</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Axel_Reinhardt</span><span class="donator-date">8 Feb 2023</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Peso_Arellano</span><span class="donator-date">19 Jan 2023</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Ben_Rasta</span><span class="donator-date">4 Sep 2018</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Tytus_Weed</span><span class="donator-date">27 May 2022</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Rafael_Hozay</span><span class="donator-date">25 Jan 2022</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Jamell_Bennett</span><span class="donator-date">11 Nov 2022</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Anonymous</span><span class="donator-date">24 Oct 2022</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Verdugo_Mendoza</span><span class="donator-date">22 Sep 2022</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Brigita Gallagher</span><span class="donator-date">13 Sep 2022</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Tavi_Grizzly</span><span class="donator-date">4 Sep 2022</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Hans_Wagner</span><span class="donator-date">20 Aug 2022</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Jai_Sinista</span><span class="donator-date">18 Jul 2022</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Tyrone_Purpz</span><span class="donator-date">20 Jun 2022</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">jan_edmund</span><span class="donator-date">19 Jun 2022</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Glenville_Stewart</span><span class="donator-date">7 Jun 2022</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Fuzz_Kanjanda</span><span class="donator-date">6 Dec 2021</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Bruce_Rojas</span><span class="donator-date">12 May 2022</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Atkinson_Carlton</span><span class="donator-date">7 May 2022</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Tyron_Crenshaw</span><span class="donator-date">1 May 2022</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Crystal_Angel</span><span class="donator-date">26 Apr 2022</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Deka_Rosso</span><span class="donator-date">3 May 2020</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Brian_Willson</span><span class="donator-date">9 Jan 2022</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Zac_Hernandez</span><span class="donator-date">10 Mar 2022</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Thomas_Walker</span><span class="donator-date">6 Mar 2022</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Anonymous</span><span class="donator-date">14 Feb 2022</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">DeMarcus_Dinero</span><span class="donator-date">7 Feb 2022</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Jenny_Talia</span><span class="donator-date">7 Feb 2022</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Rinka_Naho</span><span class="donator-date">4 Feb 2022</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Anonymous</span><span class="donator-date">22 Jan 2022</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Frank_Addison</span><span class="donator-date">11 Jan 2022</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Trent_Davies</span><span class="donator-date">2 Jan 2022</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Reezy_Richards</span><span class="donator-date">16 Dec 2021</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Trey_Nakazato</span><span class="donator-date">13 Dec 2021</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">aRTL1KE</span><span class="donator-date">29 Nov 2021</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Tyrone_Samaki</span><span class="donator-date">27 Nov 2021</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">James_Johnston</span><span class="donator-date">25 Nov 2021</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Leonel_Nocta</span><span class="donator-date">21 Oct 2021</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Ulysses_Odysseus</span><span class="donator-date">26 May 2021</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Bossof_Servertwo</span><span class="donator-date">18 Sep 2021</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Tim_Owens</span><span class="donator-date">20 Sep 2021</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Carter_Sanchez</span><span class="donator-date">16 Sep 2021</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Christine_Cole</span><span class="donator-date">3 Sep 2021</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">CynicalFish</span><span class="donator-date">21 Aug 2021</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Anonymous</span><span class="donator-date">7 Aug 2021</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Unknown</span><span class="donator-date">5 Aug 2021</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Kenji_Snow</span><span class="donator-date">29 Jul 2021</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Aleksandar_Kovacevic</span><span class="donator-date">21 Jul 2021</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Salvatore_Gambino</span><span class="donator-date">19 Jul 2021</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Donald_Ressler</span><span class="donator-date">17 Jul 2021</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Ron_Haze</span><span class="donator-date">10 Jul 2021</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Andrei_Snowden</span><span class="donator-date">6 Jul 2021</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">BeIla_Gvardia</span><span class="donator-date">3 Jul 2021</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Axcy</span><span class="donator-date">14 Jun 2021</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Angelo Gambino</span><span class="donator-date">25 May 2021</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Chelsea_Finch</span><span class="donator-date">20 May 2021</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Minoru_Suzuki</span><span class="donator-date">16 May 2021</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">DannyCx</span><span class="donator-date">28 Apr 2021</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Maxim</span><span class="donator-date">24 Apr 2021</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Evelina_Rossi</span><span class="donator-date">21 Apr 2021</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Guido_Tigchelaar</span><span class="donator-date">31 Mar 2021</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Simba_Paklandorito</span><span class="donator-date">26 Mar 2021</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Terry</span><span class="donator-date">16 Dec 2020</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Anonymous</span><span class="donator-date">17 Mar 2021</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Duplon</span><span class="donator-date">17 May 2020</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Peechy</span><span class="donator-date">18 Jan 2021</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Andre_Thorn</span><span class="donator-date">25 Jan 2021</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">David</span><span class="donator-date">2 Jan 2021</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Shamus</span><span class="donator-date">16 Dec 2020</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Bo_Vergas</span><span class="donator-date">3 Dec 2020</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Anonymous</span><span class="donator-date">18 Nov 2020</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Aleksandr_Karaev</span><span class="donator-date">17 Nov 2020</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Conrad_Lopez</span><span class="donator-date">25 May 2020</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Odane_Cole</span><span class="donator-date">21 Oct 2020</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">David_Cancer</span><span class="donator-date">15 Oct 2020</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Unknown</span><span class="donator-date">9 Oct 2020</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Tony.</span><span class="donator-date">6 Oct 2020</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Caleb_Valle</span><span class="donator-date">10 Jul 2020</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Pedro.</span><span class="donator-date">6 Jun 2020</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Unknown</span><span class="donator-date">5 Jun 2020</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">John_Reynolds</span><span class="donator-date">28 May 2020</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Valentin</span><span class="donator-date">28 May 2020</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">TheRock</span><span class="donator-date">28 Apr 2020</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Dario_Nocta</span><span class="donator-date">25 Apr 2020</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Mighty Author</span><span class="donator-date">25 Apr 2020</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Billy Lovett</span><span class="donator-date">23 Apr 2020</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Quintavius_Carpenter</span><span class="donator-date">15 Apr 2020</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Melm_Corleone</span><span class="donator-date">21 Mar 2020</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Devontae_Mills</span><span class="donator-date">14 Mar 2020</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Tyche</span><span class="donator-date">20 Feb 2020</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Anonymous</span><span class="donator-date">25 Feb 2020</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Adam_Hicks</span><span class="donator-date">16 Feb 2020</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Seppe_Coppenhagen</span><span class="donator-date">11 Feb 2020</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Steven_Anderson</span><span class="donator-date">31 Jan 2020</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Anonymous</span><span class="donator-date">29 Dec 2019</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Anonymous</span><span class="donator-date">28 Dec 2019</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Jason_Hill</span><span class="donator-date">5 May 2019</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Paco</span><span class="donator-date">7 Dec 2019</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Anonymous</span><span class="donator-date">11 Sep 2019</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">BrandonA</span><span class="donator-date">24 Jul 2019</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Daryl</span><span class="donator-date">2 Jul 2019</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Nicholas_Soprano</span><span class="donator-date">28 Jun 2019</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Charles_McCane</span><span class="donator-date">24 May 2019</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Unknown</span><span class="donator-date">5 Jan 2019</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">The Legend</span><span class="donator-date">15 Oct 2018</span></li>
+                    <li><span class="donator-icon"></span><span class="donator-name">Nicolas_Cage</span><span class="donator-date">14 Oct 2018</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div id="music-control" class="sticky-music-control">
+        <i class="fas fa-volume-up"></i>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@3/tsparticles.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
